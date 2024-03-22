@@ -1,1 +1,29 @@
-.rgb 
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: "Roboto", sans-serif;
+}
+
+.wrapperheader {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: space-between;
+
+}
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 17%;
+    text-align: center;
+    font-size: 1.4em;
+}
+.wrapperheader, ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+.wrapperheader, lu {
+    margin: auto;
+    padding: 6px;
+}

@@ -109,9 +109,3 @@ particlesJS("particles-js", {
     },
     "retina_detect": true
 });
-
-const themeToggle = document.getElementById('theme-toggle');
-
-themeToggle.addEventListener('click', function() {
-    document.body.classList.toggle('dark-theme');
-});

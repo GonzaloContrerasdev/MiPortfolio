@@ -2,9 +2,9 @@ body, html {
   font-family: "Josefin Sans", sans-serif;
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
+
     overflow: hidden;
+    flex-wrap: wrap;
 }
 
 header {
@@ -18,7 +18,7 @@ header {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #0e0e0e;
+    background-color: #000000;
     background-size: cover;
     background-position: center;
     z-index: -1;
@@ -45,21 +45,36 @@ header {
 
 }
 
-#wrapperheader ul {
+.button-container {
   flex-wrap: wrap;
   display: flex;
-  justify-content: right;
-  list-style-type: none;
-  margin: 10px;
-  padding: 0px;
+  width: 250px;
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
 }
-#wrapperheader li {
-  flex-wrap: wrap;
-  font-size: 120%;
-  display: inline;
-  color: white;
-  margin: 10px;
-  padding: 5px;
+
+.button {
+  outline: 0 !important;
+  border: 0 !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.icon {
+  font-size: 25px;
 }
 
 .book1 {
@@ -89,6 +104,8 @@ header {
 
 .cover1 {
   background: linear-gradient(to bottom right, #ffcccc, #c59e48); /* Agregar degradado lineal */
+  animation: animateGradient 5s linear infinite;
+  background-size: 600% 100%; /* Ajustar tamaño del gradiente */
   top: 0;
   position: absolute;
   width: 100%;
@@ -111,6 +128,7 @@ header {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0); /* Define el borde del texto */
 }
 
 .book1:hover .cover1 {
@@ -148,6 +166,8 @@ header {
 
 .cover2 {
   background: linear-gradient(to bottom right, #ffcccc, #f07ec0); /* Agregar degradado lineal */
+  animation: animateGradient 5s linear infinite;
+  background-size: 600% 100%; /* Ajustar tamaño del gradiente */
   top: 0;
   position: absolute;
   width: 100%;
@@ -170,6 +190,7 @@ header {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.993); /* Define el borde del texto */
 }
 
 .book2:hover .cover2 {
@@ -206,6 +227,8 @@ header {
 
 .cover3 {
   background: linear-gradient(to bottom right, #ffcccc, #07c092); /* Agregar degradado lineal */
+  animation: animateGradient 5s linear infinite;
+  background-size: 600% 100%; /* Ajustar tamaño del gradiente */
   top: 0;
   position: absolute;
   width: 100%;
@@ -228,6 +251,7 @@ header {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0); /* Define el borde del texto */
 }
 
 .book3:hover .cover3 {
@@ -263,7 +287,9 @@ header {
 }
 
 .cover4 {
-  background: linear-gradient(to bottom right, #ffcccc, #4751aa); /* Agregar degradado lineal */
+  background: linear-gradient(to bottom right, #ffcccc, #2839ce, #430cd8); /* Define tu gradiente aquí */
+  animation: animateGradient 5s linear infinite;
+  background-size: 600% 100%; /* Ajustar tamaño del gradiente */
   top: 0;
   position: absolute;
   width: 100%;
@@ -276,6 +302,7 @@ header {
   -ms-transform-origin: 0;
   transform-origin: 0;
   -webkit-box-shadow: 1px 1px 12px #000;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0); /* Define el borde del texto */
   box-shadow: 1px 1px 12px #000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -294,6 +321,15 @@ header {
   -webkit-transform: rotatey(-80deg);
   -ms-transform: rotatey(-80deg);
   transform: rotatey(-80deg);
+}
+
+@keyframes animateGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
 }
 
 .actividades p {
@@ -345,4 +381,46 @@ header {
   justify-content: center;
   align-items: center;
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 200px;
+  text-shadow: white;
+  color: white;
+}
+
+.btn {
+  display: grid;
+  place-items: center;
+  background: #e3edf7;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+	      -6px -6px 10px -1px rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0);
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.btn:hover {
+  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+	      inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+	      -0.5px -0.5px 0px rgba(255,255,255,1),
+	      0.5px 0.5px 0px rgba(0,0,0,0.15),
+	      0px 12px 10px -10px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.1);
+  transform: translateY(0.5em);
+}
+
+.btn svg {
+  transition: transform 0.5s;
+}
+
+.btn:hover svg {
+  transform: scale(0.9);
+  fill: #333333;
+}
+
+
 

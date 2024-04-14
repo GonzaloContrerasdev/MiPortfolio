@@ -1,32 +1,17 @@
-body, html {
+body {
   font-family: "Josefin Sans", sans-serif;
     margin: 0;
     padding: 0;
-
-    overflow: hidden;
     flex-wrap: wrap;
+    background-color: #333;
+    color: #f0f0f0;
 }
 
-header {
-    position: relative;
-    text-align: center;
-    padding: 20px 0;
-    color: white;
-}
 
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #000000;
-    background-size: cover;
-    background-position: center;
-    z-index: -1;
-}
 header {
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 10px;
   margin: 10px;
 }
@@ -42,14 +27,17 @@ header {
     animation: flash;
     animation-duration: 2s;
 
+  padding: 20px;
 
 }
 
 .button-container {
+  border-radius: 100px;
+  background-color: rgb(14, 14, 14);
   flex-wrap: wrap;
   display: flex;
   width: 250px;
-  height: 40px;
+  height: 50px;
   align-items: center;
   justify-content: space-around;
 }
@@ -64,7 +52,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: #ffffff;
   transition: all ease-in-out 0.3s;
   cursor: pointer;
 }
@@ -338,7 +326,7 @@ header {
 }
 
 .wrappermain h2 {
-  color: white;
+
   display: flex;
   justify-content: center;
   font-size: 20px;
@@ -382,14 +370,6 @@ header {
   align-items: center;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  margin: 200px;
-  text-shadow: white;
-  color: white;
-}
-
 .btn {
   display: grid;
   place-items: center;
@@ -422,5 +402,149 @@ footer {
   fill: #333333;
 }
 
+.card {
+  flex-wrap: wrap;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px 25px;
+  gap: 50px;
+  margin: 30px;
+}
+
+/* for all social containers*/
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 1s;
+}
+/* twitter*/
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: 1s;
+}
+/* linkdin*/
+.containerThree:hover {
+  background-color: #0072b1;
+  transition-duration: 1s;
+}
+/* Whatsapp*/
+.containerFour:hover {
+  background-color: #128C7E;
+  transition-duration: 1s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 1s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 
+.container {
+  padding: 25px;
+
+}
+.label {
+  height: 60px;
+  width: 120px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  -webkit-box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
+    inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
+    inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
+    inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
+    inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.label:hover {
+  -webkit-transform: perspective(100px) rotateX(5deg) rotateY(-5deg);
+  transform: perspective(100px) rotateX(5deg) rotateY(-5deg);
+}
+
+#checkbox:checked ~ .label:hover {
+  -webkit-transform: perspective(100px) rotateX(-5deg) rotateY(5deg);
+  transform: perspective(100px) rotateX(-5deg) rotateY(5deg);
+}
+
+#checkbox {
+  display: none;
+}
+
+#checkbox:checked ~ .label::before {
+  left: 70px;
+  background-color: #000000;
+  background-image: linear-gradient(    130deg,
+  #757272 10%,
+  #ffffff 11%,
+  #726f6f 62%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.label::before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #000000;
+  background-image: linear-gradient(
+    130deg,
+    #333 10%,
+    #333 11%,
+    #333 62%
+  );
+  left: 10px;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3), 10px 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3), 10px 10px 10px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}

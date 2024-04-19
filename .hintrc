@@ -9,6 +9,12 @@
         "button-name": "off",
         "link-name": "off"
       }
+    ],
+    "axe/forms": [
+      "default",
+      {
+        "label": "off"
+      }
     ]
   },
   "browserslist": [

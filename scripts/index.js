@@ -18,3 +18,10 @@ boton.addEventListener("click", function() {
     // Redirigir al usuario a la URL deseada
     window.open("https://github.com/0800Gonza", "_blank");
 });
+
+var boton = document.getElementById("Elementos");
+
+boton.addEventListener("click", function() {
+    // Redirigir al usuario a la URL deseada
+    window.location.href = ("botones.html")
+});

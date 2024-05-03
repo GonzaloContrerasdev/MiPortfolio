@@ -1,6 +1,0 @@
-{
-    "remote.restoreForwardedPorts": false,
-    "github.codespaces.usePortForwardingServiceForHTTPS": false,
-    "remote.autoForwardPortsFallback": 0,
-    "remote.autoForwardPorts": false
-}

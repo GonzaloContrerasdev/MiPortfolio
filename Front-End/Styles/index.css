@@ -1,7 +1,114 @@
-body {
-    background-color: #333;
+    #whatsapp-logo {
+    position: fixed; /* Esto hace que el logo permanezca en su posición */
+    bottom: 20px; /* Ajusta la distancia desde la parte inferior de la página */
+    right: 20px; /* Ajusta la distancia desde el lado derecho de la página */
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: 50px; /* Ajusta el tamaño del logo */
 }
 
-.form-control {
-    background-color: #222;
+#theme-selector-container {
+    background-color: #fff; /* Fondo blanco para el contenedor */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Borde redondeado */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
 }
+
+#theme-selector-container {
+    position: fixed; 
+    bottom: 20px; 
+    left: 20px;
+}
+/* Estilos base (tema claro) */
+body {
+    background-color: #ffffff; /* Fondo claro */
+    color: #000000; /* Texto oscuro */
+}
+
+/* Tema oscuro */
+.theme-dark {
+    background-color: #151616; /* Fondo oscuro */
+    color: #f8f9fa; /* Texto claro */
+}
+
+/* Tema azul */
+.theme-blue {
+    background-color: #4b84c2c0; /* Fondo azul */
+    color: #ffffff; /* Texto blanco */
+}
+
+
+.Documents-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    border: none;
+    margin: 0;
+    padding: 0px 15px;
+    border-radius: 5px;
+    background-color: rgb(49, 49, 83);
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .folderContainer {
+    width: 40px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .fileBack {
+    z-index: 1;
+    width: 80%;
+    height: auto;
+  }
+  .filePage {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    transition: all 0.3s ease-out;
+  }
+  .fileFront {
+    width: 85%;
+    height: auto;
+    position: absolute;
+    z-index: 3;
+    opacity: 0.95;
+    transform-origin: bottom;
+    transition: all 0.3s ease-out;
+  }
+  .text {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .Documents-btn:hover .filePage {
+    transform: translateY(-5px);
+  }
+  .Documents-btn:hover {
+    background-color: rgb(58, 58, 94);
+  }
+  .Documents-btn:active {
+    transform: scale(0.95);
+  }
+  .Documents-btn:hover .fileFront {
+    transform: rotateX(30deg);
+  }
+  
+  .documentboton {
+    display: flex;
+    justify-content: center;
+  }
+
+  .Wrapperarticle h1 {
+    display: flex;
+    justify-content: center;
+  }
+  

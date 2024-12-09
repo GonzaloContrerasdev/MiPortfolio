@@ -1,0 +1,89 @@
+---
+import "../styles/layout.css";
+import { ViewTransitions } from 'astro:transitions';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Portfolio | Gonzalo Contreras</title>
+    <ViewTransitions />
+  </head>
+  <body class="bg-slate-950">
+    <header>
+      <nav class="flex justify-between items-center p-6 lg:px-8">
+
+        <a href="#" class="flex items-center space-x-3 text-white no-underline">
+          <div
+            class="border border-white w-8 h-8 flex items-center justify-center text-lg"
+          >
+            CV
+          </div>
+          <div>
+            <h1 class="text-base font-medium">Gonzalo Contreras</h1>
+            <p class="text-sm text-gray-400">Web Developer</p>
+          </div>
+        </a>
+
+        <div
+          class="hidden md:flex divnav bg-slate-900 rounded-full p-4 space-x-1"
+        >
+          <a
+            href="/"
+            class="px-4 py-2 rounded-full hover:bg-white/10 transition-colors"
+            >Projects</a
+          >
+          <a
+            href="/about"
+            class="px-4 py-2 rounded-full hover:bg-white/10 transition-colors"
+            >About Me</a
+          >
+        </div>
+
+
+        <div class="flex space-x-6">
+          <a
+            href="#"
+            class="flex items-center space-x-1 opacity-80 hover:opacity-100 transition-opacity text-white"
+          >
+            <span>LinkedIn</span>
+            <span class="transform rotate-[-45deg] inline-block text-lg"
+              >↗</span
+            >
+          </a>
+          <a
+            href="#"
+            class="flex items-center space-x-1 opacity-80 hover:opacity-100 transition-opacity text-white"
+          >
+            <span>Github</span>
+            <span class="transform rotate-[-45deg] inline-block text-lg"
+              >↗</span
+            >
+          </a>
+        </div>
+      </nav>
+
+
+      <div class="md:hidden flex justify-center mt-4">
+        <div class="bg-nav-bg rounded-full p-1 space-x-1">
+          <a
+            href="#work"
+            class="px-4 py-2 rounded-full hover:bg-white/10 transition-colors"
+            >Work</a
+          >
+          <a
+            href="#info"
+            class="px-4 py-2 rounded-full hover:bg-white/10 transition-colors"
+            >Info</a
+          >
+        </div>
+      </div>
+    </header>
+    
+    <main transition:animate="slide">
+      <slot />
+    </main>
+  </body>
+</html>

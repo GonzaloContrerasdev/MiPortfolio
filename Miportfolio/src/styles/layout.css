@@ -1,0 +1,23 @@
+:root {
+    --primary-bg-color: rgb(41, 41, 41);
+}
+
+
+.divnav a{
+    background-color: transparent;
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.divnav a:hover{
+    text-shadow: 0 0 10px #f3f3f3, 0 0 20px #f3f3f3;
+    transform: scale(1.1);
+    transition: ease-in-out 0.3s;
+}
+
+.divnav a:focus{
+    text-shadow: 0 0 10px #f3f3f3, 0 0 20px #f3f3f3;
+    transform: scale(1.1);
+    transition: ease-in-out 0.3s;
+}
